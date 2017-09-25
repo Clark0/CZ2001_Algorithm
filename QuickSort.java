@@ -2,7 +2,7 @@ public class QuickSort {
 
 	public static void quickSort(int[] arr, int n, int m) {
 		int pivot_pos;
-		if(n >= m)
+		if (n >= m)
 			return;
 		pivot_pos = partition(arr, n, m);
 		quickSort(arr, n, pivot_pos-1);
@@ -16,7 +16,7 @@ public class QuickSort {
 		int lastSmall = low;
 		
 		
-		for(int i = low + 1; i <= high; i++) {
+		for (int i = low + 1; i <= high; i++) {
 			if(arr[i] <= pivot)
 				swap(arr, ++lastSmall, i);
 		}
